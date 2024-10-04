@@ -29,4 +29,5 @@ function resestCount()
     count = 0;
     displayCount();
     alert("Your Followers is Reset!");
-}
+}   
+
