@@ -21,11 +21,22 @@ function submitFeedback() {
 
 }
 
+function userExperience(){
+    const userExp = document.getElementById('userExperience').value;
+
+    alert("Thanh you for your feedback");
+    document.getElementById('userExp').innerHTML = userExp;
+}
+
+const expButton = document.getElementById('expBtn');
+expButton.onclick = userExperience;
+
 const submitButton = document.getElementById('submitBtn');
 submitButton.onclick = submitFeedback;
 
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         submitFeedback();
+        userExperience();
     }
 });
