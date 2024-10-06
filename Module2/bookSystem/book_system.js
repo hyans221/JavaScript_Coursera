@@ -28,17 +28,25 @@ function showbooks() {
     <p>Book Name: ${item.bookName}</p>
     <p>Author Name: ${item.authorName}</p>
     <p>Book Description: ${item.bookDescription}</p>
-    <p>No. of Pages Time: ${item.pagesNumber}</p>`
+    <p>No. of Pages Time: ${item.pagesNumber}</p>
+    <button onclick="editbook(${index})">Edit</button>
+    <button onclick="deletebook(${index})">Delete</button>`
     ).join('');
 
     document.getElementById('books').innerHTML = displayBooks;
 }
 
 
-function clearInputs()
-{
+function clearInputs() {
     document.getElementById('bookName').value = '';
     document.getElementById('authorName').value = '';
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
+}
+
+function deletebook(index) {
+    // const deleteBook = books.find((book, index)=> book.)
+
+    books.splice(index, 1);
+    showbooks();
 }
