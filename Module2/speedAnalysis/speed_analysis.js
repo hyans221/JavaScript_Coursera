@@ -28,6 +28,7 @@ function endTest(){
         return word!= "";
     }).length;
 
+
     var wpm = 0;  // Default value
 
     if(timeLapsed !== 0 && !isNaN(typeWords))
@@ -35,17 +36,20 @@ function endTest(){
         wpm = Math.round((typeWords/timeLapsed)*60);
     }
 
+    var lengthToTal = userTypeTest.length;
+
     // Display the result
     var outDisplay = document.getElementById("output");
     outDisplay.innerHTML = "<h2>Typing Test Results:</h2>" +
+                    "<p>Total length: " + lengthToTal + "</p>" + 
                     "<p>Typeword: " + typeWords + "</p>" +
                     "<p>Time: "+ timeLapsed.toFixed(2) +"</p>" +
-                    "<p>Word per Time: " + wpm + "<>/p";
+                    "<p>Word per Time: " + wpm + "</p>";
 
     // Reset button
     var button = document.getElementById("btn");
     button.innerHTML = "Start Test";
     button.onclick = startTest;    
-}
+}   
 
 
