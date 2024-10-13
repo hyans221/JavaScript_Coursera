@@ -3,12 +3,12 @@ var url = './health_article.json';
 xhr.open('GET', url, true);
 xhr.responseType = 'json';
 
-xhr.onload = function() {
+xhr.onload = function () {
     if (xhr.status === 200) {
         var articles = xhr.response.articles;
         var articlesDiv = document.getElementById('articles');
 
-        articles.forEach(function(article) {
+        articles.forEach(function (article) {
             var articleDiv = document.createElement('div');
             articleDiv.classList.add('article');
 
@@ -22,7 +22,7 @@ xhr.onload = function() {
             waysHeader.textContent = 'Ways to Achieve:';
 
             var waysList = document.createElement('ul');
-            article.ways_to_achieve.forEach(function(way) {
+            article.ways_to_achieve.forEach(function (way) {
                 var listItem = document.createElement('li');
                 listItem.textContent = way;
                 waysList.appendChild(listItem);
@@ -32,7 +32,7 @@ xhr.onload = function() {
             benefitsHeader.textContent = 'Benefits:';
 
             var benefitsList = document.createElement('ul');
-            article.benefits.forEach(function(benefit) {
+            article.benefits.forEach(function (benefit) {
                 var listItem = document.createElement('li');
                 listItem.textContent = benefit;
                 benefitsList.appendChild(listItem);
