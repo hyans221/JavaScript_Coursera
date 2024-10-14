@@ -5,6 +5,7 @@ xhr.open('GET', url, true);
 xhr.responseType = 'json';
 
 var articles = xhr.response.articles;
+
 var articlesDiv = document.getElementById('articles');
 
 

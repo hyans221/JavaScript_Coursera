@@ -1,6 +1,9 @@
 var xhr = new XMLHttpRequest();
 var url = './health_article.json';
+
 xhr.open('GET', url, true);
+
+
 xhr.responseType = 'json';
 
 xhr.onload = function () {
@@ -30,6 +33,7 @@ xhr.onload = function () {
 
             var benefitsHeader = document.createElement('h3');
             benefitsHeader.textContent = 'Benefits:';
+            
 
             var benefitsList = document.createElement('ul');
             article.benefits.forEach(function (benefit) {
