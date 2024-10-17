@@ -51,7 +51,7 @@ xhr.onload = function () {
             articlesDiv.appendChild(articleDiv);
         });
     } else {
-        console.error('Failed to load JSON data');
+        console.error('Failed to load JSON');
     }
 };
 
